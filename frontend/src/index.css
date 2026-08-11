@@ -1,0 +1,101 @@
+/* ---------- Design tokens (CSS custom properties) ---------- */
+:root {
+  /* Core palette */
+  --color-bg: #121014;           /* near-black charcoal, not pure black */
+  --color-surface: #1e1c21;      /* card/section backgrounds, one step lighter */
+  --color-surface-alt: #2a2730;  /* slightly lighter still, for hover/contrast */
+  --color-fuchsia: #d946ef;
+  --color-fuchsia-bright: #f0abfc; /* for hover states, glows */
+  --color-fuchsia-muted: #86198f;  /* for borders, subtler accents */
+  --color-text: #f4f2f6;
+  --color-text-muted: #a8a3ad;
+
+  /* Spacing scale — use these everywhere instead of one-off values */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Typography */
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+}
+
+/* ---------- Reset and base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ---------- Typography hierarchy via weight, not just size ---------- */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-fuchsia-bright);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+em {
+  font-weight: 400;
+  color: var(--color-fuchsia-muted);
+  font-style: normal; /* use weight/color instead of italics for emphasis */
+}
+
+/* ---------- Layout spacing ---------- */
+section {
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+}
+
+nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--color-fuchsia-bright);
+}

@@ -1,0 +1,38 @@
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-fuchsia-muted);
+  border-radius: 14px;
+  padding: var(--space-md);
+  width: 280px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.project-card:hover {
+  background: var(--color-surface-alt);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(217, 70, 239, 0.15);
+}
+
+/* ---------- Journey entries (full-width bar, updated palette) ---------- */
+.journey-entry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0;
+  background: var(--color-surface);
+  border-left: 4px solid var(--color-fuchsia);
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
